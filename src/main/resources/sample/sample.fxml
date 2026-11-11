@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="15" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sample.Controller">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label fx:id="title" style="-fx-font-size: 22; -fx-font-weight: bold;"
+           text="Выбери мешок!"/>
+
+    <HBox alignment="CENTER" spacing="30">
+        <Label fx:id="labelMonet" text="Monetok u igroka: 0"/>
+        <Label fx:id="labelPopitok" text="Popitok: 0"/>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="20">
+        <ImageView fx:id="mesh1" fitWidth="120" fitHeight="120"
+                   preserveRatio="true" style="-fx-cursor: hand;"/>
+        <ImageView fx:id="mesh2" fitWidth="120" fitHeight="120"
+                   preserveRatio="true" style="-fx-cursor: hand;"/>
+        <ImageView fx:id="mesh3" fitWidth="120" fitHeight="120"
+                   preserveRatio="true" style="-fx-cursor: hand;"/>
+    </HBox>
+
+    <ImageView fx:id="view" fitWidth="250" fitHeight="180"
+               preserveRatio="true"/>
+
+    <HBox alignment="CENTER" spacing="20">
+        <Button fx:id="btnPay" text="Кинуть монетку" onAction="#onPay"/>
+        <Button fx:id="btnStart" text="Старт игры" onAction="#onStart"/>
+    </HBox>
+
+    <Label fx:id="status" text="Ждём старта"/>
+</VBox>
